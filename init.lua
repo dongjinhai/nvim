@@ -30,7 +30,7 @@ vim.keymap.set('n', '<Leader>J', 'J', { noremap = true })
 
 
 -- Plugins manager --
--- require("config.lazy")
+require("config.lazy")
 
 
 if not vim.g.vscode then
