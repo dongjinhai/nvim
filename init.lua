@@ -25,7 +25,12 @@ vim.keymap.set({'n', 'v'}, 'J', '5<Down>', { noremap = true })
 vim.keymap.set({'n', 'v'}, 'K', '5<Up>', { noremap = true })
 
 vim.keymap.set('n', '<Leader>sc', ':nohlsearch<CR>', { noremap = true })
-vim.keymap.set('n', '<Leader>fs', ':Write<CR>', { noremap = true })
+if vim.g.vscode then
+    -- 在vscode中:w不能使用，需要使用:Write来代替
+    vim.keymap.set('n', '<Leader>fs', ':Write<CR>', { noremap = true })
+else
+    vim.keymap.set('n', '<Leader>fs', ':w<CR>', { noremap = true })
+end
 vim.keymap.set('n', '<Leader>J', 'J', { noremap = true })
 
 
