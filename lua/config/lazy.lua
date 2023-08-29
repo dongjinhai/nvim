@@ -13,12 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     { "folke/which-key.nvim", lazy = true },
-    { 
-        "numToStr/Comment.nvim",
-        init = function()
-            require("Comment").setup()
-        end
-    },
+    -- { 
+    --     "numToStr/Comment.nvim",
+    --     init = function()
+    --         require("Comment").setup()
+    --     end
+    -- },
     {
         "kylechui/nvim-surround",
         init = function()
