@@ -40,31 +40,11 @@ require("config.lazy")
 
 if not vim.g.vscode then
     -- Auto command
-    -- 自动将光标移动到上次关闭文件前的位置
-    vim.api.nvim_create_autocmd("BufReadPost", {
-        pattern = {"*"},
-        callback = function()
-            if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line("$") then
-                vim.api.nvim_exec("normal! g'\"",false)
-            end
-        end
-    })
+    require("config.autocmds")
 end
 
 
 -- VsCode action keymaps -- 
 if vim.g.vscode then
-    --- 使用vscode自带的注释功能
-    vim.keymap.set('n', 'gcc',
-        function()
-            require("vscode-neovim").call("editor.action.commentLine")
-        end,
-        { noremap = true }
-    )
-    vim.keymap.set({'x', 'n', 'o'}, 'gc',
-        function()
-            require("vscode-neovim").call("editor.action.commentLine")
-        end,
-        { noremap = true }
-    )
+    require("config.vscode")
 end
