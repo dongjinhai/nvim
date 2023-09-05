@@ -51,6 +51,7 @@ end
 
 
 -- Autocmd -- 
+-- 在复制文本的时候高亮被复制的文本
 vim.api.nvim_create_autocmd({"TextYankPost"}, {
     pattern = "*",
     callback = function() vim.highlight.on_yank({ higroup="IncSearch", timeout=250 }) end
