@@ -1,6 +1,7 @@
 {
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
-  "mini.ai": { "branch": "main", "commit": "efeab91f9373d6d3c73314fda9e3366020d05157" },
-  "nvim-surround": { "branch": "main", "commit": "cfa2da7f469f1e759f2a961bc25fa4ccfe1795c2" },
+  "mini.ai": { "branch": "main", "commit": "4a2e387b121352dfb478f440c9a5313a9d97006c" },
+  "nightfox.nvim": { "branch": "main", "commit": "1e650316680a777fb50e4ab35d82ecf32da485b8" },
+  "nvim-surround": { "branch": "main", "commit": "633a0ab03159569a66b65671b0ffb1a6aed6cf18" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }

@@ -32,4 +32,7 @@ require("lazy").setup({
             require("mini.ai").setup()
         end
     },
+    { 
+        "EdenEast/nightfox.nvim" 
+    },
 })
