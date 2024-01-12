@@ -3,7 +3,7 @@ Neovim配置文件
 
 ## windows上安装
 ```bash
-cd C:\Users\16501\AppData\Local
+cd ~\AppData\Local
 git clone git@github.com:dongjinhai/nvim.git
 ```
 

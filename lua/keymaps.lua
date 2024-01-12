@@ -38,4 +38,6 @@ if vim.g.vscode then
     )
 else
     vim.keymap.set('n', '<Leader>fs', ':w<CR>', { noremap = true })
+    vim.keymap.set('n', '<Leader>e', ':Neotree<CR>', { noremap = true })
+    vim.keymap.set('n', '<Leader>ec', ':Neotree ~/AppData/Local/nvim<CR>', { noremap = true })
 end

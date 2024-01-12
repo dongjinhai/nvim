@@ -1,7 +1,7 @@
 -- Map leader to space
 vim.g.mapleader = ' '
 
--- Common settings
+-- options setting --
 vim.o.nohlsearch = true
 vim.o.incsearch = true
 vim.o.smartcase = true
@@ -23,3 +23,7 @@ require("lazyconf")
 
 -- autocmds setting --
 require("autocmds")
+
+-- colorscheme setting --
+require("themes")
+
