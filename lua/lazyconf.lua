@@ -32,7 +32,24 @@ require("lazy").setup({
             require("mini.ai").setup()
         end
     },
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { 
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+        -- 在vsocde模式下不加载此插件 --
+        cond = not vim.g.vscode,
+        init = function()
+            require("catppuccin").setup({
+                flavour = "mocha",
+                background = {
+                    light = "latte",
+                    dark = "mocha"
+                },
+            })
+
+            vim.cmd.colorscheme "catppuccin"
+        end
+    },
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -41,6 +58,8 @@ require("lazy").setup({
           "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
           "MunifTanjim/nui.nvim",
           -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-        }
+        },
+        -- 在vsocde模式下不加载此插件 --
+        cond = not vim.g.vscode 
     }
 })
