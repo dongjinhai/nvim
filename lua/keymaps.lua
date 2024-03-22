@@ -10,6 +10,9 @@ vim.keymap.set({'n', 'v'}, 'K', '5<Up>', { noremap = true })
 vim.keymap.set('n', '<Leader>sc', ':nohlsearch<CR>', { noremap = true })
 vim.keymap.set('n', '<Leader>J', 'J', { noremap = true })
 
+vim.keymap.set('n', '<A-n>', ':tabnext<CR>', { noremap = true })
+vim.keymap.set('n', '<A-p>', ':tabprev<CR>', { noremap = true })
+
 
 -- vscode or neovim --
 if vim.g.vscode then
