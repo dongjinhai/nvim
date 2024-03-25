@@ -36,6 +36,16 @@ if vim.g.vscode then
         end,
         { noremap = true }
     )
+    vim.keymap.set('n', '<Leader>rn', 
+        function()
+            require("vscode-neovim").call("editor.action.rename")
+        end,
+        { noremap = true }
+    )
+    --- 需要在vscode中keybindings.json中添加以下配置
+    -- {"key": "alt+n", "command": "vscode-neovim.send", "args": "<a-n>", "when": "editorTextFocus && neovim.init"},
+    -- {"key": "alt+p", "command": "vscode-neovim.send", "args": "<a-p>", "when": "editorTextFocus && neovim.init"},
+    -- 在vscode中使用ctrl+p打开搜索，然后输入>keyboard, 选非default的kebindings.josn(default的不让修改)
     vim.keymap.set('n', '<A-n>', ':Tabnext<CR>', { noremap = true })
     vim.keymap.set('n', '<A-p>', ':Tabprev<CR>', { noremap = true })
 else
