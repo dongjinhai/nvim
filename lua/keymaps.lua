@@ -36,6 +36,8 @@ if vim.g.vscode then
         end,
         { noremap = true }
     )
+    vim.keymap.set('n', '<A-n>', ':Tabnext<CR>', { noremap = true })
+    vim.keymap.set('n', '<A-p>', ':Tabprev<CR>', { noremap = true })
 else
     vim.keymap.set('n', '<Leader>fs', ':w<CR>', { noremap = true })
     vim.keymap.set('n', '<Leader>e', ':Neotree<CR>', { noremap = true })
