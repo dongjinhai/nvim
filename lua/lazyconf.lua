@@ -36,8 +36,7 @@ require("lazy").setup({
         "catppuccin/nvim",
         name = "catppuccin",
         priority = 1000,
-        -- 在vsocde模式下不加载此插件 --
-        cond = not vim.g.vscode,
+        cond = not vim.g.vscode,  -- 在vsocde模式下不加载此插件
         init = function()
             require("catppuccin").setup({
                 flavour = "mocha",
@@ -59,7 +58,6 @@ require("lazy").setup({
           "MunifTanjim/nui.nvim",
           -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
-        -- 在vsocde模式下不加载此插件 --
-        cond = not vim.g.vscode 
+        cond = not vim.g.vscode -- 在vsocde模式下不加载此插件
     }
 })
