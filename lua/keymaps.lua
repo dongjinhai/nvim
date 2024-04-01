@@ -6,7 +6,7 @@
 
 -- 定义快捷函数
 local map = vim.keymap.set
-local vscode = require("vscode-neovim")
+local vscode = not vim.g.vscode or require("vscode-neovim")
 
 -- Common --
 map('', 'Q', 'gq')
