@@ -16,7 +16,8 @@ map({'n', 'v'}, 'J', '5<Down>', { noremap = true })
 map({'n', 'v'}, 'K', '5<Up>', { noremap = true })
 
 map('n', '<Leader>sc', ':nohlsearch<CR>', { noremap = true })
-map('n', '<Leader>J', 'J', { noremap = true })
+map('n', '<Leader>j', 'J', { noremap = true })
+map('n', '<Leader>k', 'K', { noremap = true })
 
 
 -- vscode or neovim --
