@@ -69,7 +69,7 @@ require("lazy").setup({
         dependencies = 'nvim-tree/nvim-web-devicons',
         keys = {
             { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete Other Buffers" },
-            { "<leader>bd", "<Cmd>bd<CR>bN<CR>", desc = "Delete current Buffer and go to PreBuffer" },
+            { "<leader>bd", "<Cmd>bd<CR>", desc = "Delete current Buffer and go to PreBuffer" },
             { "<A-n>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
             { "<A-p>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
         },

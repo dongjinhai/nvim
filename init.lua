@@ -5,6 +5,7 @@ vim.g.maplocalleader = ' '
 -- options setting --
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
+vim.opt.wrap = false
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.opt.ignorecase = true
