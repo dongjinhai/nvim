@@ -12,7 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { "folke/which-key.nvim", lazy = true },
     {
         "kylechui/nvim-surround",
         init = function()
@@ -48,48 +47,8 @@ require("lazy").setup({
                 },
             })
 
-            -- vim.cmd.colorscheme "catppuccin"
+            vim.cmd.colorscheme "catppuccin"
         end
-    },
-    {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        dependencies = {
-          "nvim-lua/plenary.nvim",
-          "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-          "MunifTanjim/nui.nvim",
-          -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-        },
-        cond = not vim.g.vscode -- 在vsocde模式下不加载此插件
-    },
-    {
-        'akinsho/bufferline.nvim',
-        version = "*",
-        event = "VeryLazy",
-        dependencies = 'nvim-tree/nvim-web-devicons',
-        keys = {
-            { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete Other Buffers" },
-            { "<leader>bd", "<Cmd>bd<CR>", desc = "Delete current Buffer and go to PreBuffer" },
-            { "<A-n>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
-            { "<A-p>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-        },
-        opts = {
-            options = {
-                offsets = {
-                    {
-                        filetype = "neo-tree",
-                        text = "Neo-tree",
-                        highlight = "Directory",
-                        text_align = "left",
-                    }
-                },
-            }
-        },
-        config = function(_, opts)
-            vim.opt.termguicolors = true
-            require("bufferline").setup(opts)
-        end,
-        cond = not vim.g.vscode -- 在vsocde模式下不加载此插件
     },
     {
         "nvim-lualine/lualine.nvim",

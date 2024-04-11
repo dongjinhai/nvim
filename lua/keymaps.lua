@@ -58,8 +58,8 @@ if vim.g.vscode then
     map('n', '<A-p>', ':Tabprev<CR>', { noremap = true })
 else
     map('n', '<Leader>fs', ':w<CR>', { noremap = true })
-    map('n', '<Leader>e', ':Neotree<CR>', { noremap = true })
-    map('n', '<Leader>ec', ':Neotree ~/AppData/Local/nvim<CR>', { noremap = true })
+    map('n', '<Leader>e', ':Ntree .<CR>', { noremap = true })
+    map('n', '<Leader>ec', ':Ntree ~/AppData/Local/nvim/<CR>', { noremap = true })
 
     -- 原生的tab使用这个配置
     -- map('n', '<A-n>', ':tabnext<CR>', { noremap = true })
