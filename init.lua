@@ -23,11 +23,10 @@ vim.o.clipboard = 'unnamedplus'
 
 if not vim.g.vscode then
     vim.g.netrw_banner=0  --禁用没用的横幅
-    vim.g.netrw_winsize=75  --初始窗口大小为25%
+    vim.g.netrw_winsize=25  --初始窗口大小为25%
     vim.g.netrw_liststyle=3 --使用树状模式
-    -- vim.g.netrw_altv=2 --分割窗口时默认在右边
-    vim.g.netrw_browse_split=2 -- enter时在上一个窗口打开
-    vim.g.nvim_tree_side = 'right'
+    vim.g.netrw_altv=1 --分割窗口时默认在右边
+    vim.g.netrw_browse_split=4 -- enter时在上一个窗口打开
 end
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
@@ -43,11 +42,4 @@ require("autocmds")
 
 -- colorscheme setting --
 require("themes")
-
-
-function getHomeDirectory()
-    return os.getenv("USERPROFILE") or os.getenv("HOMEDRIVE") .. os.getenv("HOMEPATH")
-end
-
-print(getHomeDirectory())
 

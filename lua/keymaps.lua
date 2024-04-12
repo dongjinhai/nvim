@@ -58,21 +58,19 @@ if vim.g.vscode then
     map('n', '<A-p>', ':Tabprev<CR>', { noremap = true })
 else
     map('n', '<Leader>fs', ':w<CR>', { noremap = true })
-    map('n', '<Leader>e', ':Ntree .<CR>', { noremap = true })
-    -- map('n', '<Leader>ec', ':Ntree ~/AppData/Local/nvim/<CR>', { noremap = true })
+    map('n', '<Leader>e', ':Vexplore .<CR>', { noremap = true })
+    -- map('n', '<Leader>ec', ':Vexplore ~\\AppData\\Local\\nvim\\', { noremap = true })
     map('n', '<Leader>ec',
-        function() 
+        function()
             local home = os.getenv("USERPROFILE") or os.getenv("HOMEDRIVE") .. os.getenv("HOMEPATH")
-            vim.cmd(":Ntree " .. home .. "/AppData/Local/nvim/<CR>")
+            vim.cmd(":Vexplore " .. home .. "\\AppData\\Local\\nvim\\")
         end
     )
 
 
     -- 原生的tab使用这个配置
-    -- map('n', '<A-n>', ':tabnext<CR>', { noremap = true })
-    -- map('n', '<A-p>', ':tabprev<CR>', { noremap = true })
-    -- 配置了bufferline.nvim后使用这个配置
-    -- 配置已在lazyconf.lua中配置
+    map('n', '<A-n>', ':tabnext<CR>', { noremap = true })
+    map('n', '<A-p>', ':tabprev<CR>', { noremap = true })
 
     -- Resize window using <ctrl> arrow keys
     map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
