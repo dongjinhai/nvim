@@ -59,7 +59,14 @@ if vim.g.vscode then
 else
     map('n', '<Leader>fs', ':w<CR>', { noremap = true })
     map('n', '<Leader>e', ':Ntree .<CR>', { noremap = true })
-    map('n', '<Leader>ec', ':Ntree ~/AppData/Local/nvim/<CR>', { noremap = true })
+    -- map('n', '<Leader>ec', ':Ntree ~/AppData/Local/nvim/<CR>', { noremap = true })
+    map('n', '<Leader>ec',
+        function() 
+            local home = os.getenv("USERPROFILE") or os.getenv("HOMEDRIVE") .. os.getenv("HOMEPATH")
+            vim.cmd(":Ntree " .. home .. "/AppData/Local/nvim/<CR>")
+        end
+    )
+
 
     -- 原生的tab使用这个配置
     -- map('n', '<A-n>', ':tabnext<CR>', { noremap = true })

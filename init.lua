@@ -44,3 +44,10 @@ require("autocmds")
 -- colorscheme setting --
 require("themes")
 
+
+function getHomeDirectory()
+    return os.getenv("USERPROFILE") or os.getenv("HOMEDRIVE") .. os.getenv("HOMEPATH")
+end
+
+print(getHomeDirectory())
+
