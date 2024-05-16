@@ -19,6 +19,9 @@ map('n', '<Leader>sc', ':nohlsearch<CR>', { noremap = true })
 map('n', '<Leader>j', 'J', { noremap = true })
 map('n', '<Leader>k', 'K', { noremap = true })
 
+-- Better paste
+map("v", "p", '"_dP')
+
 -- Move to window using the <ctrl> hjkl keys
 -- map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 -- map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
