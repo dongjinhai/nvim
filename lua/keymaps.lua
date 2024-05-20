@@ -19,6 +19,9 @@ map('n', '<Leader>sc', ':nohlsearch<CR>', { noremap = true })
 map('n', '<Leader>j', 'J', { noremap = true })
 map('n', '<Leader>k', 'K', { noremap = true })
 
+-- Better paste
+map("v", "p", '"_dP')
+
 -- Move to window using the <ctrl> hjkl keys
 -- map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 -- map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
@@ -56,6 +59,8 @@ if vim.g.vscode then
     -- 在vscode中使用ctrl+p打开搜索，然后输入>keyboard, 选非default的kebindings.josn(default的不让修改)
     map('n', '<A-n>', ':Tabnext<CR>', { noremap = true })
     map('n', '<A-p>', ':Tabprev<CR>', { noremap = true })
+    -- 显示或者隐藏主侧边栏
+    map('n', '<Leader>e', function() vscode.call("workbench.action.toggleSidebarVisibility") end)
 else
     map('n', '<Leader>fs', ':w<CR>', { noremap = true })
     map('n', '<Leader>e', ':Vexplore .<CR>', { noremap = true })

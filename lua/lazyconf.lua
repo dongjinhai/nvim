@@ -32,22 +32,5 @@ require("lazy").setup({
             require("mini.comment").setup()
         end,
         cond = not vim.g.vscode -- 在vsocde模式下不加载此插件
-    },
-    { 
-        "catppuccin/nvim",
-        name = "catppuccin",
-        priority = 1000,
-        cond = not vim.g.vscode,  -- 在vsocde模式下不加载此插件
-        init = function()
-            require("catppuccin").setup({
-                flavour = "mocha",
-                background = {
-                    light = "latte",
-                    dark = "mocha"
-                },
-            })
-
-            vim.cmd.colorscheme "catppuccin"
-        end
     }
 })
