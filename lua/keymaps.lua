@@ -59,14 +59,12 @@ if vim.g.vscode then
 else
     map('n', '<Leader>fs', ':w<CR>', { noremap = true })
     map('n', '<Leader>e', ':Vexplore .<CR>', { noremap = true })
-    -- map('n', '<Leader>ec', ':Vexplore ~\\AppData\\Local\\nvim\\', { noremap = true })
     map('n', '<Leader>ec',
         function()
             local home = os.getenv("USERPROFILE") or os.getenv("HOMEDRIVE") .. os.getenv("HOMEPATH")
             vim.cmd(":Vexplore " .. home .. "\\AppData\\Local\\nvim\\")
         end
     )
-
 
     -- 原生的tab使用这个配置
     map('n', '<A-n>', ':tabnext<CR>', { noremap = true })
