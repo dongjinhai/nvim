@@ -32,7 +32,7 @@ map("v", "p", '"_dP')
 -- vscode or neovim --
 if vim.g.vscode then
     -- 在vscode中:w不能使用，需要使用:Write来代替
-    map('n', '<Leader>fs', ':Write<CR>', { noremap = true })
+    map('n', '<Leader>fs', ':w<CR>', { noremap = true })
     --- 使用vscode自带的注释功能
     map('n', 'gcc',
         function()
