@@ -61,6 +61,7 @@ if vim.g.vscode then
     map('n', '<A-p>', ':Tabprev<CR>', { noremap = true })
     -- 显示或者隐藏主侧边栏
     map('n', '<Leader>e', function() vscode.call("workbench.action.toggleSidebarVisibility") end)
+    map('v', '<Leader>t', function() vscode.call("translates.translates") end)
 else
     map('n', '<Leader>fs', ':w<CR>', { noremap = true })
     map('n', '<Leader>e', ':Vexplore .<CR>', { noremap = true })
